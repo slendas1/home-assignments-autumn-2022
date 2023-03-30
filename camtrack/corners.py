@@ -151,8 +151,6 @@ class Tracker:
                         filt_mask[i] = True
 
             layer_corners = layer_corners[filt_mask]
-            if np.sum(~filt_mask) > 0:
-                print("oh shit")
 
             corners = np.concatenate((corners, layer_corners * k), axis=0)
             sizes = np.concatenate(
